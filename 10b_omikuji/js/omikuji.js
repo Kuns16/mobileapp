@@ -1,5 +1,8 @@
 "use strict";
 
+let n = ""; 
+let nBefore = "";
+
 window.addEventListener("DOMContentLoaded",
 function ()  {
     // ヘッダーのテキストエフェクト
@@ -70,6 +73,7 @@ btn1.addEventListener("click",
         // }
 
         // btn1.style.transition = "1s"; //fukada add
+        
         let resultText = [
             "img/daikichi.png",
             "img/chukichi.png",
@@ -77,6 +81,13 @@ btn1.addEventListener("click",
             "img/suekichi.png",
             "img/daikyo.png"
         ];
+
+        //
+        while (n === nBefore){
+            n = Math.floor(Math.random() * resultText.length);
+        }
+        nBefore = n; //
+
         // let resultColor = ["#ff0000","#c71585","#ff1493","#ff69b4","#ff8c00","#1e90ff"];
         // let resultFontSize = ["90px","80px","70px","60px","50px","40px"];
         let resultMaxSpeed = [10,10,8,5,5];
@@ -96,7 +107,7 @@ btn1.addEventListener("click",
             "sound/omikuji_sound5.mp3",
         ];
 
-        let n = Math.floor(Math.random() * resultText.length);
+        //let n = Math.floor(Math.random() * resultText.length);
 
         //おみくじのテキスト画像対応
         omikujiTextImage.src = resultText[n]; //fukada-add おみくじのテキスト画像対応
