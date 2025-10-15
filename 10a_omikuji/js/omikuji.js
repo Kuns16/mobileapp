@@ -35,11 +35,16 @@ function ()  {
         },false
 );
 
+let soundEndflag = "0"; //sound control
 // おみくじボタン１
 const btn1 = document.getElementById("btn1");
 const omikujiText = document.getElementById("omikujiText");
 btn1.addEventListener("click",
     function (){
+        // sound control
+        if(soundEndflag === "1"){
+            soundControl("end","");
+        }
         // let n = Math.floor(Math.random() * 3);
 
         // switch (n)  {
@@ -75,11 +80,23 @@ btn1.addEventListener("click",
             "img/leaf.png",
             "img/snowflakes.png"
         ];
+        let resultSound = [
+            "sound/omikuji_sound1.mp3",
+            "sound/omikuji_sound2.mp3",
+            "sound/omikuji_sound2.mp3",
+            "sound/omikuji_sound2.mp3",
+            "sound/omikuji_sound2.mp3",
+            "sound/omikuji_sound3.mp3",
+        ];
+
         let n = Math.floor(Math.random() * resultText.length);
         omikujiText.textContent = resultText[n];
         omikujiText.style.color = resultColor[n];
         omikujiText.style.fontSize = resultFontSize[n];
-
+        // sound control
+        w_sound = resultSound[n];
+        soundControl("start", w_sound);  //サウンド
+        soundEndflag = "1";
         // snowfall stop
         $(document).snowfall("clear");
         
@@ -96,3 +113,17 @@ btn1.addEventListener("click",
 
     },  false
 );
+
+//sound control
+let w_sound
+let music
+function soundControl(status, w_sound){
+    if(status === "start"){
+        music = new Audio(w_sound);
+        music.currentTime = 0;
+        music.play();
+    }else if(status === "end"){
+        music.pause();
+        music.currentTime = 0;
+    }
+}

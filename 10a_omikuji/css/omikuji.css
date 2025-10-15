@@ -66,8 +66,8 @@ header {
 #btn1 {
     position: relative;
     margin: 20px auto;
-    width: 200px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     background-image: url(../img/omikuji.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -103,8 +103,7 @@ header {
 /********************************/
 /*　モバイル表示　　　　　　　  　*/
 /******************************/
-
-@media screen and (max-width:480px) {  /* Media Query */
+@media screen and (max-width:480px) {
     body{
         background-position: 75% 0%;
         background-size: auto 1000px;
@@ -197,14 +196,32 @@ footer>p {
         height: 100%;
     }
 }
+
+/* Media Query */
+@media screen and (max-width:480px) {
+    body {
+        background-position: 75% 0%;
+        background-size: auto 1000px;
+        background-repeat: no-repeat;
+    }
+
+    header {
+        font-size: 32px;
+        color: aqua;
+    }
+}
+/*******************************************************/
+/* class=back                                         */
+/* id=btn99 backボタン                                 */
+/*******************************************************/
 .back{
     text-align: left;
 }
 #btn99{
-    padding: 0.5em;
-    border-radius: 0.3em;
-    color: whitesmoke;
-    font-size: 1.5em;
-    background: rgb(26,212,212);
-    cursor: pointer; /*カーソルをポインターの形　にする*/
+padding: 0.5em;
+border-radius: 0.3em;
+color: whitesmoke;
+font-size: 1.5em;
+background: rgb(26, 212, 212);
+cursor: pointer; /*カーソルをポインターの形（かたち）にする*/
 }
