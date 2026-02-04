@@ -23,6 +23,9 @@ body {
   Meiryo,
   sans-serif;
   background: #EEEEEE;
+  background-image: url(../img/cute1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
 }
 /*******************************************************/
