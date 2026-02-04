@@ -18,8 +18,8 @@ body{
   text-align: center;
   background-color:rgba(170, 233, 168, 0.6);
   background-blend-mode: soft-light;
-  /* background-image: url(../img/backimg.JPG); */
-  /* background-size: cover; */
+  background-image: url(../img/cute_memo3.jpg);
+  background-size: cover;
 }
 
 header, main, footer, h1, h2, h3, p, div, table, .field, .btn-area, .filler01 {
@@ -34,7 +34,7 @@ th, td {
 /* 見出し                                              */
 /*******************************************************/
 h1 {
-    color: rgb(165, 243, 243);
+    color: rgb(243, 0, 41);
 }
 h2 {
     /* color: grey; */
